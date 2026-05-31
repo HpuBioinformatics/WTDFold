@@ -1,4 +1,4 @@
-# UFold: Fast and Accurate RNA Secondary Structure Prediction with Deep Learning
+# FWUFold: Fast and Accurate RNA Secondary Structure Prediction with Deep Learning
 ## Abstract
 The precise prediction of RNA secondary structures is vital for unlocking their biological functions, yet conventional models face a major performance bottleneck when dealing with complex long-range dependencies and multi-scale features. To bridge this gap, we introduce FWUFold, a cutting-edge deep learning framework. FWUFold fuses the Discrete Wavelet Transform (DWT) into the pipeline of the classic U-Net. By breaking down intricate RNA sequences into multi-resolution frequency components, it vastly empowers the model to capture sharp structural boundaries and long-distance base pairs.
 
@@ -33,9 +33,6 @@ conda env create -f environmnet.yaml
 ```
 conda activate FWUFold
 ``` 
-
-## Pre-trained Models and using data
-Pre-trained models are deposited in our drive. Please download them and put them into models folder.
 
 ## Usage
 
