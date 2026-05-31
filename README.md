@@ -21,7 +21,7 @@ The precise prediction of RNA secondary structures is vital for unlocking their 
 ### 1.Clone the repository.
 
 ```
-git clone https://github.com/uci-cbcl/FWUFold.git
+git clone https://github.com/HpuBioinformatics/FWUFold.git
 ```
 Navigate to the root of this repo and setup the conda environment.
 
