@@ -101,7 +101,7 @@ def parse_args():
     parser.add_argument('--seq_name', type=str, default='Test_seq',
                         help='Default name for the sequence if providing a raw string via --input.')
 
-    parser.add_argument('--output_dir', type=str, default='./predictions_new',
+    parser.add_argument('--output_dir', type=str, default='./predictions',
                         help='Directory to save predicted .bpseq and .ct files.')
 
     return parser.parse_args()
