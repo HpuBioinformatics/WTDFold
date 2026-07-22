@@ -12,7 +12,7 @@ import collections
 import numpy as np
 from tqdm import tqdm
 
-from model.model import FWUNet
+from model.model import WTDFold
 from common.data_utils import *
 from datasets.data_generator import RNADataset, BucketBatchSampler, collate_fn
 from common.postprocess import *
@@ -299,7 +299,7 @@ def main():
         )
         val_loaders[val_file] = loader_val
 
-    contact_net = FWUNet(
+    contact_net = WTDFold(
         img_ch=cfg.get("img_ch", 17),
         output_ch=cfg.get("output_ch", 1),
         wave=cfg.get("wave", "haar")
