@@ -12,7 +12,7 @@ import collections
 import numpy as np
 from tqdm import tqdm
 
-from model.model import FWUNet
+from model.model import WTDFold
 from common.data_utils import *
 from datasets.data_generator import RNADataset, BucketBatchSampler, collate_fn
 from common.postprocess import *
@@ -110,7 +110,7 @@ def main():
 
     weight_path = cfg.get("weight_path", None)
     if weight_path is None:
-        weight_path = os.path.join(cfg["save_dir"], "tufold_latest.pt")
+        weight_path = os.path.join(cfg["save_dir"], "WTDFold_latest.pt")
 
     if not os.path.exists(weight_path):
         print(f"Warning: Weight file not found at {weight_path}")
@@ -140,7 +140,7 @@ def main():
         pin_memory=True
     )
 
-    contact_net = FWUNet(
+    contact_net = WTDFold(
         img_ch=cfg.get("img_ch", 17),
         output_ch=cfg.get("output_ch", 1),
         wave=cfg.get("wave", "haar")
