@@ -63,5 +63,5 @@ python predict.py --raw_seq "GGGCCCGUAGUCUCAGGGUAAGAGCACACGCUGAAGUGUGUGGGUCGGCAG
 ```
 Note: fasta_file is the directory for your predictions, which contains the FASTA files to be processed.
 ## Acknowledgements
-This project draws inspiration from FWUFold. We extend our gratitude to the authors for their outstanding research and code, and we hope that readers will find their contributions equally valuable.
+This project draws inspiration from WTDFold. We extend our gratitude to the authors for their outstanding research and code, and we hope that readers will find their contributions equally valuable.
 
