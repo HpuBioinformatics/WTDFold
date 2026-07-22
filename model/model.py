@@ -21,7 +21,7 @@ class ConvBlock(nn.Module):
     def forward(self, x):
         return self.conv(x)
 
-class FWUNet(nn.Module):
+class WTDFold(nn.Module):
     CHANNELS = [32, 64, 128, 256, 512]
 
     def __init__(self, img_ch=17, output_ch=1, wave='haar'):
