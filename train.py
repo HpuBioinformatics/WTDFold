@@ -12,7 +12,7 @@ import collections
 import numpy as np
 from tqdm import tqdm
 
-from model.model import WDTFold
+from model.model import WTDFold
 from common.data_utils import *
 from datasets.data_generator import RNADataset, BucketBatchSampler, collate_fn
 from common.postprocess import *
@@ -132,7 +132,7 @@ def train(contact_net, train_loader, cfg, val_loaders=None):
 
         torch.save(
             contact_net.state_dict(),
-            os.path.join(save_path, "fwufold_latest.pt")
+            os.path.join(save_path, "WTDFold_latest.pt")
         )
 
         if val_loaders is not None and len(val_loaders) > 0:
@@ -159,7 +159,7 @@ def train(contact_net, train_loader, cfg, val_loaders=None):
 
             torch.save(
                 contact_net.state_dict(),
-                os.path.join(save_path, f"fwufold_ep{epoch + 1}_avgf1_{mean_f1:.3f}.pt")
+                os.path.join(save_path, f"WTDFold_ep{epoch + 1}_avgf1_{mean_f1:.3f}.pt")
             )
 
             contact_net.train()
@@ -294,7 +294,7 @@ def main():
         )
         val_loaders[val_file] = loader_val
 
-    contact_net = WDTFold(
+    contact_net = WTDFold(
         img_ch=cfg.get("img_ch", 17),
         output_ch=cfg.get("output_ch", 1),
         wave=cfg.get("wave", "haar")
