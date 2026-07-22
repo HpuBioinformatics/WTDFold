@@ -1,6 +1,6 @@
-# FWUFold: A Frequency-Wavelet Enhanced U-Net Architecture for Accurate RNA Secondary Structure Prediction.
+# WTDFold: An RNA Secondary Structure Prediction Method based on Wavelet Transform and Deep Learning.
 ## Abstract
-The precise prediction of RNA secondary structures is vital for unlocking their biological functions, yet conventional models face a major performance bottleneck when dealing with complex long-range dependencies and multi-scale features. To bridge this gap, we introduce FWUFold, a cutting-edge deep learning framework. FWUFold fuses the Discrete Wavelet Transform (DWT) into the pipeline of the classic U-Net. By breaking down intricate RNA sequences into multi-resolution frequency components, it vastly empowers the model to capture sharp structural boundaries and long-distance base pairs.
+The precise prediction of RNA secondary structures is vital for unlocking their biological functions, yet conventional models face a major performance bottleneck when dealing with complex long-range dependencies and multi-scale features. To bridge this gap, we introduce WTDFold, a cutting-edge deep learning framework. WTDFold fuses the Discrete Wavelet Transform (DWT) into the pipeline of the classic U-Net. By breaking down intricate RNA sequences into multi-resolution frequency components, it vastly empowers the model to capture sharp structural boundaries and long-distance base pairs.
 
 ## Prerequisites
 --python >= 3.9
@@ -21,7 +21,7 @@ The precise prediction of RNA secondary structures is vital for unlocking their 
 ### 1.Clone the repository.
 
 ```
-git clone https://github.com/HpuBioinformatics/FWUFold.git
+git clone https://github.com/HpuBioinformatics/WTDFold.git
 ```
 Navigate to the root of this repo and setup the conda environment.
 
@@ -31,8 +31,8 @@ conda env create -f environmnet.yaml
 ```
 ### 3.Activate conda environment.
 ```
-conda activate FWUFold
-cd FWUFold
+conda activate WTDFold
+cd WTDFold
 ``` 
 
 ## Usage
