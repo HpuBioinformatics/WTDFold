@@ -28,7 +28,7 @@ Navigate to the root of this repo and setup the conda environment.
 ### 2.Use the following command to create the environment.
 ```
 cd WTDFold
-conda env create -f environmnet.yaml
+conda env create -f environmnet.yml
 ```
 ### 3.Activate conda environment.
 ```
