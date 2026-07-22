@@ -9,7 +9,7 @@ from torch.utils import data
 import collections
 import warnings
 
-from model.model import FWUNet
+from model.model import WTDFold
 from common.data_utils import seed_torch
 from datasets.data_generator import collate_fn,FASTARNADataset,BucketBatchSampler
 from common.postprocess import postprocess
@@ -87,7 +87,7 @@ def predict_all(contact_net, test_generator, cfg):
                         pairs.append((i, j))
 
             bpseq_path = os.path.join(out_dir, f"{safe_seq_name}.bpseq")
-            save_bpseq(seq, pairs, bpseq_path, seq_name)  # 文件内部的 header 依然保留原名
+            save_bpseq(seq, pairs, bpseq_path, seq_name)
 
             ct_path = os.path.join(out_dir, f"{safe_seq_name}.ct")
             save_ct(seq, pairs, ct_path, seq_name)
@@ -103,7 +103,7 @@ def main():
 
     weight_path = cfg.get("weight_path", None)
     if weight_path is None:
-        weight_path = os.path.join(cfg.get("save_dir", "./"), "fwufold_latest.pt")
+        weight_path = os.path.join(cfg.get("save_dir", "./"), "WTDFold_latest.pt")
 
     if not os.path.exists(weight_path):
         print(f"Error: Weight file not found at {weight_path}")
@@ -143,7 +143,7 @@ def main():
     )
 
     print("\n===== Loading Model =====")
-    contact_net = FWUNet(
+    contact_net = WTDFold(
         img_ch=cfg.get("img_ch", 17),
         output_ch=cfg.get("output_ch", 1),
         base_len=cfg.get("base_len", 640),
