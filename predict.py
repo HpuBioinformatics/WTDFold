@@ -146,7 +146,6 @@ def main():
     contact_net = WTDFold(
         img_ch=cfg.get("img_ch", 17),
         output_ch=cfg.get("output_ch", 1),
-        base_len=cfg.get("base_len", 640),
         wave=cfg.get("wave", "haar")
     ).to(device)
 
