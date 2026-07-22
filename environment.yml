@@ -1,4 +1,4 @@
-name: FWUFold
+name: WTDFold
 channels:
   - pytorch
   - defaults
